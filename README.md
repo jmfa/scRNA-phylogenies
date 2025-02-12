@@ -1,4 +1,4 @@
-**Estimating phylogenetic trees from (smart-seq2) scRNA-seq data.**
+## **Estimating phylogenetic trees from (smart-seq2) scRNA-seq data.**
 
 In this repository, we provide our recommended pipeline for performing single-cell phylogenetic analysis using scRNA-seq data. Our workflow includes:
 
