@@ -3,6 +3,7 @@
 In this repository, we provide our recommended pipeline for performing single-cell phylogenetic analysis using scRNA-seq data. Our workflow includes:
 
 - FASTQ Mapping and BAM Processing
+- Variant calling + Genotyping
 - Phylogenetic Tree Reconstruction (with bootstrap support estimation)
 - Read Count Normalization
 - Phylogenetic Signal Estimation
