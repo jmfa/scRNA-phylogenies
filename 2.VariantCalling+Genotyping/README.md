@@ -1,7 +1,7 @@
 ## Step 2: Variant Calling & Genotyping
 
 ### Calling Variants with scAllele
-Once the BAM files are ready, we can proceed with variant calling using scAllele.
+Once the BAM files are ready, we can proceed with variant calling using [scAllele](https://github.com/gxiaolab/scAllele/).
 First, we generate a list of all deduplicated BAM files:
 
 ```sh
