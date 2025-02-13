@@ -8,11 +8,11 @@ Let's assume we have a sample file (BC01-Samples) with the following structure:
 
 ```
 $ head -n 5 BC01-Samples
-SRR2973279    BC01_02
-SRR2973280    BC01_03
-SRR2973281    BC01_04
-SRR2973282    BC01_05
-SRR2973283    BC01_06
+SRR2973279    BC01_02   Tumor
+SRR2973280    BC01_03   Tumor
+SRR2973281    BC01_04   Tumor
+SRR2973282    BC01_05   Tumor
+SRR2973283    BC01_06   Tumor
 ```
 
 Each row contains:
