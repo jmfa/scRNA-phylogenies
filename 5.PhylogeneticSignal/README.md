@@ -3,8 +3,8 @@
 Now that the gene expression data is processed and transformed, we can proceed to estimate the phylogenetic signal. In our study, we use the [**sensiPhy**](https://www.rdocumentation.org/packages/sensiPhy/versions/0.8.5) R package, which is designed to account for phylogenetic uncertainty when estimating the signal. Specifically, we will estimate the phylogenetic signal for each gene by leveraging the bootstrap trees generated in the previous step (i.e., `BC01-CellPhy.raxml.bootstraps`), alongside the transformed gene expression data (`BC01_VSD.txt`).
 
 #### Input files:
-*Gene Expression Data:* `BC01_VSD.txt` – This file contains the transformed (VSD) gene expression profiles.
-*Bootstrap Trees:* `BC01-CellPhy.raxml.bootstraps` – This file contains the 100 bootstrap phylogenetic trees generated from the CellPhy analysis.
+- *Gene Expression Data:* `BC01_VSD.txt` – This file contains the transformed (VSD) gene expression profiles.
+- *Bootstrap Trees:* `BC01-CellPhy.raxml.bootstraps` – This file contains the 100 bootstrap phylogenetic trees generated from the CellPhy analysis.
 
 #### Phylogenetic signal estimation process:
 Phylogenetic signal will be measured by comparing the expression data across different cells in the context of their evolutionary relationships. We will use the *tree_physig* function to estimate the lambda score and its confidence intervals:
