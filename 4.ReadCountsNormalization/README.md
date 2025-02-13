@@ -1,6 +1,6 @@
 ## Step 5: Read counts transformation
 
-For all datasets analyzed in our study, the raw single-cell expression profiles were retrieved from the Gene Expression Omnibus (GEO), such as dataset GSE75688. The expression data is typically provided in a matrix format, where rows represent genes and columns represent individual samples. Below is an example of what the input matrices may look like:
+For all datasets analyzed in our study, the raw single-cell expression profiles were retrieved from the Gene Expression Omnibus (GEO) (e.g., GSE75688). The expression data is typically provided in a matrix format, where rows represent genes and columns represent individual samples. Below is an example of what the input matrices may look like:
 
 ```bash
 head BC01-Samples
