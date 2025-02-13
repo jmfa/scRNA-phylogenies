@@ -9,5 +9,5 @@ In this repository, we provide our recommended pipeline for performing single-ce
 - **Step 6:** [Phylogenetic Signal Estimation](https://github.com/jmfa/scRNA-phylogenies/tree/main/5.PhylogeneticSignal)
 
 For further details on the methodology and its application, please refer to our publication:
-"Unraveling the phylogenetic signal of gene expression from single-cell RNA-seq data"
+**"Unraveling the phylogenetic signal of gene expression from single-cell RNA-seq data"**
 https://www.biorxiv.org/content/10.1101/2024.04.17.589871v1
