@@ -5,3 +5,28 @@ For mapping, we use STAR aligner (v2.7.9a), followed by MarkDuplicates from Pica
 
 ### Defining Input Samples
 Let's assume we have a sample file (BC01-Samples) with the following structure:
+
+```
+$ head -n 5 BC01-Samples
+SRR2973279    BC01_02
+SRR2973280    BC01_03
+SRR2973281    BC01_04
+SRR2973282    BC01_05
+SRR2973283    BC01_06
+```
+
+Each row contains:
+- SRA Accession ID (Column 1)
+- Cell Identifier (Column 2)
+
+We will use a simple while loop to extract these variables and use them as input for the Mapping_Processing.sh script:
+```
+while read file
+do
+    sraID=$(echo $file | cut -d " " -f 1)
+    cellID=$(echo $file | cut -d " " -f 2)
+    ./Mapping_Processing.sh 
+done < BC01-Samples
+```
+This loop iterates through each line of the `BC01-Samples` file, extracts the relevant IDs, and passes them as arguments to the `Mapping_Processing.sh` script.
+Once this step is complete, we can move on to the next section: `Variant Calling + Genotyping`.
