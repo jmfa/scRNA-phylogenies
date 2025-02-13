@@ -18,6 +18,7 @@ SRR2973283    BC01_06   Tumor
 Each row contains:
 - SRA Accession ID (Column 1)
 - Cell Identifier (Column 2)
+- Cell type (Column 3)
 
 We will use a simple while loop to extract these variables and use them as input for the Mapping_Processing.sh script:
 ```
