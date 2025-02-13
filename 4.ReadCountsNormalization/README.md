@@ -2,7 +2,7 @@
 
 For all datasets analyzed in our study, the raw single-cell expression profiles were retrieved from the Gene Expression Omnibus (GEO), such as dataset GSE75688. The expression data is typically provided in a matrix format, where rows represent genes and columns represent individual samples. Below is an example of what the input matrices may look like:
 
-```
+```bash
 $ head BC01-Samples
 SRR2973279    BC01_02	Tumor
 SRR2973280    BC01_03	Tumor
@@ -21,7 +21,7 @@ GCLC  3  5  108  2  53
 
 The raw counts matrix (BC1-RawCounts.tsv) contains gene expression counts for each sample, and the sample metadata (BC01-Samples) provides information about each sample's ID and cell type (e.g., Tumor or Healthy). The raw counts can now be loaded into R for normalization and transformation using the DESeq2 R package:
 
-```{r}
+```r
 
 # Load library
 library(DESeq2)
