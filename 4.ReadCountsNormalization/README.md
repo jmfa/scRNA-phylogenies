@@ -3,14 +3,14 @@
 For all datasets analyzed in our study, the raw single-cell expression profiles were retrieved from the Gene Expression Omnibus (GEO), such as dataset GSE75688. The expression data is typically provided in a matrix format, where rows represent genes and columns represent individual samples. Below is an example of what the input matrices may look like:
 
 ```bash
-$ head BC01-Samples
+head BC01-Samples
 SRR2973279    BC01_02	Tumor
 SRR2973280    BC01_03	Tumor
 SRR2973281    BC01_04	Tumor
 SRR2973282    BC01_05	Tumor
 SRR2973283    BC01_06	Tumor
 
-$ head BC1-RawCounts.tsv | cut -f 1-6 
+head BC1-RawCounts.tsv | cut -f 1-6 
 BC01_02 BC01_03 BC01_04 BC01_05 BC01_06
 DPM1  51 120  7  181  32
 SCYL3 3  1 92 6  60
