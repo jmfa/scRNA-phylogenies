@@ -4,12 +4,12 @@
 Once the BAM files are ready, we can proceed with variant calling using scAllele.
 First, we generate a list of all deduplicated BAM files:
 
-```
+```sh
 ls *.dedup.bam > bamList
 ```
 Now, we run scAllele using the following command:
 
-```
+```sh
 ./scAllele -b bamList -o BC01-scAllele -n 46 -g ${reference}/hg38.fa 
 ```
 
@@ -54,7 +54,7 @@ done < BC01-CellIDs
 ### Merging Individual VCFs
 Once all cells are genotyped, we merge the individual VCF files into a single dataset:
 
-```
+```sh
 ls *.genotyped-scAllele.vcf.gz > mergeList
 bcftools merge -l mergeList -O v -o BC01-scAllele-Genotyped.vcf
 ```
@@ -68,7 +68,7 @@ To ensure high-quality data, we apply filtering to remove sites and cells with e
 ### Filtering Low-Quality Variants (Per Site)
 We filter sites separately for Tumor and Healthy cells:
 
-```
+```sh
 vcftools --vcf BC01-scAllele-Genotyped.vcf --keep BC01-nonTumor_samples --recode --out temp.nonTumor
 vcftools --vcf BC01-scAllele-Genotyped.vcf --keep BC01-Tumor_samples --recode --out temp.Tumor
 
@@ -104,7 +104,7 @@ rm temp.* pos_*
 ### Filtering Low-Quality Cells
 Next, we remove cells with more than 75% missing genotypes:
 
-```
+```sh
 vcftools --vcf BC01-scAllele-Genotyped.Missingness.recode.vcf --missing-indv --out BC01
 awk '$5<=0.75 {print $1}' BC01.imiss > indv_keep
 vcftools --vcf BC01-scAllele-Genotyped.Missingness.recode.vcf --keep indv_keep --recode --out BC01-scAllele-Genotyped.Missingness.Indv
