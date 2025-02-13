@@ -9,7 +9,7 @@ Now that the gene expression data is processed and transformed, we can proceed t
 #### Phylogenetic signal estimation process:
 Phylogenetic signal will be measured by comparing the expression data across different cells in the context of their evolutionary relationships. We will use the *tree_physig* function to estimate the lambda score and its confidence intervals:
 
-```{r}
+```r
 
 # Load libraries
 library(ape)
