@@ -2,8 +2,8 @@
 Using the VCF file generated in the previous step, we can now run CellPhy to infer the single-cell phylogeny.
 Here, we use the default strategy to perform a full analysis, including tree search and bootstrapping:
 
-```
-./cellphy.sh FULL BC01-scAllele-Genotyped.Missingness.Indv.recode.vcf \
+```sh
+$ ./cellphy.sh FULL BC01-scAllele-Genotyped.Missingness.Indv.recode.vcf \
   --m GT16+FO+E \
   --bs-metric tbe \
   --prefix BC01-CellPhy \
