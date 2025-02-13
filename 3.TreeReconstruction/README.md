@@ -1,5 +1,5 @@
 ## Step 4: Tree Reconstruction with CellPhy
-Using the VCF file generated in the previous step, we can now run CellPhy to infer the single-cell phylogeny.
+Using the VCF file generated in the previous step, we can now run [CellPhy](https://github.com/amkozlov/cellphy) to infer the single-cell phylogeny.
 Here, we use the default strategy to perform a full analysis, including tree search and bootstrapping:
 
 ```sh
